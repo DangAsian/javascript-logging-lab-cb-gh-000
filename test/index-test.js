@@ -13,6 +13,7 @@ describe('index', () => {
 
     jsdom.env(html, [src], {
       virtualConsole: jsdom.createVirtualConsole().sendTo(console)
+      console.error("Halp")
     }, (err, window) => {
       expect(spy).toHaveBeenCalled('expected console.error to have been called')
       console.error.restore()
